@@ -41,7 +41,7 @@ con.connect((err) => {
           // Create a table called `Room`
           const roomTable = `
            CREATE TABLE IF NOT EXISTS Room (
-            room_no INT AUTO_INCREMENT PRIMARY KEY,
+            room_no TINYINT AUTO_INCREMENT PRIMARY KEY,
             room_name VARCHAR(255) NOT NULL,
             floor_number VARCHAR(255) NOT NULL
             );
