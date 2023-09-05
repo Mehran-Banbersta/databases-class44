@@ -12,9 +12,28 @@ async function createEpisodeExercise(client) {
    */
 
   // Write code that will add this to the collection!
+  const episodeExercise = {
+    episode: "S09E13",
+    title: "MOUNTAIN HIDE-AWAY",
+    elements: [
+      "CIRRUS",
+      "CLOUDS",
+      "CONIFER",
+      "DECIDIOUS",
+      "GRASS",
+      "MOUNTAIN",
+      "MOUNTAINS",
+      "RIVER",
+      "SNOWY_MOUNTAIN",
+      "TREE",
+      "TREES",
+    ],
+  };
 
-  console.log(
-    `Created season 9 episode 13 and the document got the id ${"TODO: fill in variable here"}`
+  const episodeExerciseCollection = client.db("mydb").collection("episodes");
+
+  const episodeExerciseResult = await episodeExerciseCollection.insertOne(
+    episodeExercise
   );
 }
 
